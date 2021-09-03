@@ -6,7 +6,6 @@ def display_board(board):
         print(board[i] + " | " + board[i+1]+ " | " + board[i+2])
 
     print()
-# display_board(board)
 def check_win(board, char):
     for i in range(0, 9, 3):
         if board[i]==char and board[i+1]==char and board[i+2]==char:
@@ -61,17 +60,13 @@ while not game_over:
 
     board[position] = char
     win = check_win(board, char)
-    # win_X = check_win(board, "X")
-    # win_O = check_win(board, "O")
+
 
     if win:
         game_over = True
         print("*******************************************************")
         print(char+" wins")
-    # elif win_O:
-    #     game_over = True
-    #     print("*******************************************************")
-    #     print("O wins")
+
 
     if not game_over:
         game_over = check_game_over(board)
